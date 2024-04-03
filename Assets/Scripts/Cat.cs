@@ -4,6 +4,13 @@ using UnityEngine;
 
 public class Cat : MonoBehaviour
 {
+    public GameObject hungryCat;
+    public GameObject fullCat;
+    public RectTransform front;
+
+    float full = 5.0f;    // 최대 체력
+    float energy = 0.0f;  // 현재 체력
+
     // Start is called before the first frame update
     void Start()
     {
@@ -13,6 +20,39 @@ public class Cat : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.down * 0.05f;
+        if(energy < full) // 현재 체력 < 전체 체력일 때 아래로 내려가기
+        {
+            transform.position += Vector3.down * 0.05f;
+        }
+        else  // 체력바가 다 찬 상태일 때 옆으로 이동하기(왼쪽일 땐 왼쪽으로, 오른쪽일 땐 오른쪽으로 이동)
+        {
+            // 중앙 기준으로 오른쪽에 있을 때
+            if(transform.position.x > 0)
+            {
+
+            }
+        }
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Food"))
+        {
+            if(energy < full) // 현재 체력 < 전체 체력
+            {
+                // 체력바 게이지 상승
+                energy += 1.0f;
+                front.localScale = new Vector3(energy / full, 1.0f, 1.0f); // 현재 체력을 최대 체력으로 나누어서 비율을 계산
+
+                // 고양이에게 맞은 Food는 파괴
+                Destroy(collision.gameObject);
+            }
+            else // 체력바가 다 찬 상태
+            {
+                hungryCat.SetActive(false);
+                fullCat.SetActive(true);
+            }
+        }
     }
 }
