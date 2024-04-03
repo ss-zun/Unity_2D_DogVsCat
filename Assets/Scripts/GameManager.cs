@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
         {
             Instance = this;
         }
+        Application.targetFrameRate = 60;
     }
 
     // Start is called before the first frame update

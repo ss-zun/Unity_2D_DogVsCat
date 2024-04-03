@@ -15,8 +15,6 @@ public class Cat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Application.targetFrameRate = 60; // 나중에 GameManager로 옮겨야함
-
         // 고양이 랜덤 위치 생성
         float x = Random.Range(-9.0f, 9.0f);
         float y = 30.0f;
@@ -29,6 +27,12 @@ public class Cat : MonoBehaviour
         if(energy < full) // 현재 체력 < 전체 체력일 때 아래로 내려가기
         {
             transform.position += Vector3.down * 0.05f;
+
+            // 배부르지 않은 고양이가 생선가게에 닿았을 때
+            if(transform.position.y < -16.0f)
+            {
+                GameManager.Instance.GameOver(); // 게임 종료
+            }
         }
         else  // 체력바가 다 찬 상태일 때 옆으로 이동하기(왼쪽일 땐 왼쪽으로, 오른쪽일 땐 오른쪽으로 이동)
         {
