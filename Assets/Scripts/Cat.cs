@@ -6,6 +6,7 @@ public class Cat : MonoBehaviour
 {
     public GameObject hungryCat;
     public GameObject fullCat;
+
     public RectTransform front;
 
     float full = 5.0f;    // 최대 체력
@@ -15,6 +16,11 @@ public class Cat : MonoBehaviour
     void Start()
     {
         Application.targetFrameRate = 60;
+
+        // 고양이 랜덤 위치 생성
+        float x = Random.Range(-9.0f, 9.0f);
+        float y = 30.0f;
+        transform.position = new Vector2(x, y);
     }
 
     // Update is called once per frame
