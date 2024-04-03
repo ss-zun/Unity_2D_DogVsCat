@@ -477,6 +477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: NormalCat
       objectReference: {fileID: 0}
+    - target: {fileID: 6733861944840910947, guid: 93a37f5bfb5d5c244a67cc93dd590f0a, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8953397459283341478, guid: 93a37f5bfb5d5c244a67cc93dd590f0a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
