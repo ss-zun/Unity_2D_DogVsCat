@@ -56,11 +56,13 @@ public class Cat : MonoBehaviour
 
                 // 고양이에게 맞은 Food는 파괴
                 Destroy(collision.gameObject);
-            }
-            else // 체력바가 다 찬 상태
-            {
-                hungryCat.SetActive(false);
-                fullCat.SetActive(true);
+
+                // 게이지가 다 차고 바로 fullCat으로 바뀌게 하기 위해서 여기에 코드 작성
+                if (energy == 5.0f) // 체력바가 다 찬 상태
+                {    
+                    hungryCat.SetActive(false);
+                    fullCat.SetActive(true);
+                }
             }
         }
     }
