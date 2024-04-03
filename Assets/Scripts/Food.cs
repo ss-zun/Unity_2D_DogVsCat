@@ -14,5 +14,9 @@ public class Food : MonoBehaviour
     void Update()
     {
         transform.position += Vector3.up * 0.5f; // (0, 0.5, 0)
+        if(transform.position.y > 27.0f)
+        {
+            Destroy(gameObject);
+        }
     }
 }

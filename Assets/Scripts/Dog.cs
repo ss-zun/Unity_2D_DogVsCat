@@ -15,7 +15,7 @@ public class Dog : MonoBehaviour
     void MakeFood()
     {
         float x = transform.position.x;
-        float y = transform.position.y;
+        float y = transform.position.y + 2.0f;
         Instantiate(food, new Vector2(x, y), Quaternion.identity); // Quaternion.identity : 별도의 회전값을 주지 않겠다는 의미
     }
 }
