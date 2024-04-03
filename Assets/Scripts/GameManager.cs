@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
         }
         Application.targetFrameRate = 60;
+        Time.timeScale = 1f;
     }
 
     // Start is called before the first frame update
@@ -38,5 +39,6 @@ public class GameManager : MonoBehaviour
     public void GameOver()
     {
         retryBtn.SetActive(true);
+        Time.timeScale = 0f;
     }
 }

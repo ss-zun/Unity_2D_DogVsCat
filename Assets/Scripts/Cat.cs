@@ -66,6 +66,7 @@ public class Cat : MonoBehaviour
                 {    
                     hungryCat.SetActive(false);
                     fullCat.SetActive(true);
+                    Destroy(gameObject, 3.0f); // 3초 후 고양이 파괴
                 }
             }
         }

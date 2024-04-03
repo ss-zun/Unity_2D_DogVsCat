@@ -691,7 +691,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   normalCat: {fileID: 3283995285177648425, guid: 93a37f5bfb5d5c244a67cc93dd590f0a, type: 3}
-  retryBtn: {fileID: 0}
+  retryBtn: {fileID: 482260386}
 --- !u!1 &2084582635
 GameObject:
   m_ObjectHideFlags: 0
