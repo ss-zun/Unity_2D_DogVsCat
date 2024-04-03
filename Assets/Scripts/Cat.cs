@@ -29,10 +29,13 @@ public class Cat : MonoBehaviour
             // 중앙 기준으로 오른쪽에 있을 때
             if(transform.position.x > 0)
             {
-
+                transform.position += Vector3.right * 0.05f; // 오른쪽으로 이동
+            }
+            else // x가 0이거나 x(중앙)보다 작을 때
+            {
+                transform.position += Vector3.left * 0.05f; // 왼쪽으로 이동
             }
         }
-
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
