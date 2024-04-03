@@ -15,7 +15,7 @@ public class Cat : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Application.targetFrameRate = 60;
+        Application.targetFrameRate = 60; // 나중에 GameManager로 옮겨야함
 
         // 고양이 랜덤 위치 생성
         float x = Random.Range(-9.0f, 9.0f);
