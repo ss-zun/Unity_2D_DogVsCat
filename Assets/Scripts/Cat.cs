@@ -12,6 +12,8 @@ public class Cat : MonoBehaviour
     float full = 5.0f;    // 최대 체력
     float energy = 0.0f;  // 현재 체력
 
+    bool isFull = false;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -63,10 +65,16 @@ public class Cat : MonoBehaviour
 
                 // 게이지가 다 차고 바로 fullCat으로 바뀌게 하기 위해서 여기에 코드 작성
                 if (energy == 5.0f) // 체력바가 다 찬 상태
-                {    
-                    hungryCat.SetActive(false);
-                    fullCat.SetActive(true);
-                    Destroy(gameObject, 3.0f); // 3초 후 고양이 파괴
+                {
+                    // 점수를 더할 때 배가 부른 고양이가 Food에 또 맞게 되면 발생하는 문제 방어
+                    if (!isFull)
+                    {
+                        isFull = true;
+                        hungryCat.SetActive(false);
+                        fullCat.SetActive(true);
+                        Destroy(gameObject, 3.0f); // 3초 후 고양이 파괴
+                        GameManager.Instance.AddScore();
+                    }
                 }
             }
         }
