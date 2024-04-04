@@ -34,12 +34,6 @@ public class GameManager : MonoBehaviour
         InvokeRepeating("MakeCat", 0f, 1f);
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     void MakeCat()
     {
         Instantiate(normalCat);
