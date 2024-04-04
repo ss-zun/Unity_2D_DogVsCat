@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public GameObject normalCat;
+    public GameObject fatCat;
     public GameObject retryBtn;
 
     public RectTransform levelFront;
@@ -41,6 +42,24 @@ public class GameManager : MonoBehaviour
     void MakeCat()
     {
         Instantiate(normalCat);
+
+        if(level == 1)
+        {
+            // lv.1 20% 확률로 고양이를 더 생성해준다.
+            int p = Random.Range(0, 10); // 0 ~ 9
+            if(p < 2) Instantiate(normalCat); // 10개중에 2개만 선택됨 => 20% 확률 표현
+        }
+        else if(level == 2)
+        {
+            // lv.2 50% 확률로 고양이를 더 생성해준다.
+            int p = Random.Range(0, 10); // 0 ~ 9
+            if (p < 5) Instantiate(normalCat); // 10개중에 5개만 선택됨 => 50% 확률 표현
+        }
+        else
+        {
+            // lv.3 뚱뚱한 고양이를 생성해준다.
+            Instantiate(fatCat);
+        }
     }
 
     public void GameOver()
