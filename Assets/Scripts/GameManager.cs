@@ -55,7 +55,7 @@ public class GameManager : MonoBehaviour
             int p = Random.Range(0, 10); // 0 ~ 9
             if (p < 5) Instantiate(normalCat); // 10개중에 5개만 선택됨 => 50% 확률 표현
         }
-        else
+        else if(level == 3)
         {
             // lv.3 뚱뚱한 고양이를 생성해준다.
             Instantiate(fatCat);

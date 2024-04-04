@@ -453,6 +453,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8842886860800164389}
+  - component: {fileID: -7689759233487673217}
   m_Layer: 0
   m_Name: FatCat
   m_TagString: Untagged
@@ -477,3 +478,19 @@ Transform:
   - {fileID: 2926260657827971630}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &-7689759233487673217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7822715145401998807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ca475cf758b70c4bada3484c62a16c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hungryCat: {fileID: 2019017862480361470}
+  fullCat: {fileID: 5729549133456235989}
+  front: {fileID: 3150583884939199967}
+  type: 2

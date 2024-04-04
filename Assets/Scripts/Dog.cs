@@ -8,7 +8,7 @@ public class Dog : MonoBehaviour
 
     void Start()
     {
-        InvokeRepeating("MakeFood", 0f, 0.5f); // 강아지의 Food 반복 생성해주기
+        InvokeRepeating("MakeFood", 0f, 0.2f); // 강아지의 Food 반복 생성해주기
     }
 
     private void Update()
