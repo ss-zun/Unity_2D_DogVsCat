@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
 
     public GameObject normalCat;
     public GameObject fatCat;
+    public GameObject pirateCat;
     public GameObject retryBtn;
 
     public RectTransform levelFront;
@@ -59,6 +60,15 @@ public class GameManager : MonoBehaviour
         {
             // lv.3 뚱뚱한 고양이를 생성해준다.
             Instantiate(fatCat);
+        }
+        else if (level >= 4)
+        {
+            // lv.4 해적 고양이를 생성해준다.
+            int p = Random.Range(0, 10);
+            if (p < 5) Instantiate(normalCat);
+
+            Instantiate(fatCat);
+            Instantiate(pirateCat);
         }
     }
 

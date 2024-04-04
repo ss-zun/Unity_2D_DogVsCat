@@ -1036,6 +1036,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   normalCat: {fileID: 3283995285177648425, guid: 93a37f5bfb5d5c244a67cc93dd590f0a, type: 3}
   fatCat: {fileID: 7822715145401998807, guid: 5130dab01ddb7464cbe3e246d436bd4b, type: 3}
+  pirateCat: {fileID: 4981581673062068892, guid: a9371fe797937414da7cc908e87efc05, type: 3}
   retryBtn: {fileID: 2084582635}
   levelFront: {fileID: 1518572054}
   levelTxt: {fileID: 28097010}

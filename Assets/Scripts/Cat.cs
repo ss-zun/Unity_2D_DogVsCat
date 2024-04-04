@@ -35,6 +35,10 @@ public class Cat : MonoBehaviour
             speed = 0.02f;
             full = 10f;
         }
+        else if (type == 3) // PirateCat
+        {
+            speed = 0.1f;
+        }
     }
 
     // Update is called once per frame
